@@ -8,6 +8,7 @@ class _04_SearchTest {
 
 	// A MINIMUM OF 3 TESTS ARE REQUIRED FOR EACH METHOD
 	_00_LinearSearch ls = new _00_LinearSearch();
+	_01_BinarySearch bs = new _01_BinarySearch();
 	@Test
 	public void testLinearSearch() {
 		//1. use the assertEquals method to test your linear search method.
@@ -23,6 +24,12 @@ class _04_SearchTest {
 	public void testBinarySearch() {
 		//2. use the assertEquals method to test your binary search method.
 		//   remember that the array must be sorted
+		int [] test1 = {1,2,3,4,5,65,};
+		int [] test2 = {18,28,2832};
+		int [] test3 = {1232,213213,812080480};
+		assertEquals(2, bs.binarySearch(test1,0,3,3));
+		assertEquals(-1, bs.binarySearch(test2,0,2,38));
+		assertEquals(2, bs.binarySearch(test3,0,2,812080480));
 	}
 	
 	@Test
